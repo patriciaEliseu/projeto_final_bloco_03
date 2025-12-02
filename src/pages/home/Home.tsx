@@ -5,19 +5,19 @@
 function Home() {
 	return (
     <>
-		  <div className="bg-flex justify-center">
+		  <div className="bg-flex justify-center ">
 
                 <div
                     className="bg-linear-to-bl from-slate-50 via-fuchsia-50 to-gray-100 
                     flex flex-col md:flex-row items-center justify-center 
-                    px-10 gap-10"
+                    px-10 gap-10 py-25 "
                 >
 
                     <div className="flex flex-col gap-4 items-center justify-center py-4">
                         <h1 className="text-8xl font-extrabold text-fuchsia-600">
                             Seja Bem Vinde!
                         </h1>
-                        <p className="text-slate-800 leading-relaxed text-lg font-semibold">
+                        <p className="text-slate-800 leading-relaxed text-3xl font-semibold">
                             Aqui você encontra Medicamentos e Cosméticos!
                         </p>
                         <div className="text-slate-800 leading-relaxed text-lg font-semibold flex justify-around gap-4">

@@ -27,7 +27,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
-    <div className="flex flex-col min-h-[80vh]"></div>
+    <div className="flex flex-col"></div>
       <Navbar 
             menuState={menuState}
             onMenuToggle={toggleMenu}
