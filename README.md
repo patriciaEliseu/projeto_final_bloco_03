@@ -1,73 +1,155 @@
-# React + TypeScript + Vite
+# Projeto Farmacia - Frontend com React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<br />
 
-Currently, two official plugins are available:
+<div align="center">     
+     <img src="https://i.imgur.com/AzshGmS.png" title="source: imgur.com" width="50%"/>
+</div> 
+<br /> 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<div align="center">   
+    <img src="https://img.shields.io/github/languages/top/patriciaEliseu/projeto_final_bloco_03?style=flat-square" />
+    <img src="https://img.shields.io/github/repo-size/patriciaEliseu/projeto_final_bloco_03?style=flat-square" />   
+     <img src="https://img.shields.io/github/languages/count/patriciaEliseu/projeto_final_bloco_03?style=flat-square" />
+    <img src="https://img.shields.io/github/last-commit/patriciaEliseu/projeto_final_bloco_03?style=flat-square" />
+    <img src="https://img.shields.io/github/issues/patriciaEliseu/projeto_final_bloco_03?style=flat-square" />
+  <img src="https://img.shields.io/github/issues-pr/patriciaEliseu/projeto_final_bloco_03?style=flat-square" />
+    <img src="https://img.shields.io/badge/status-em%20desenvolvimento-yellow?style=flat-square" /> 
+</div>
 
-## React Compiler
+<br />
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 1. Descrição
 
-## Expanding the ESLint configuration
+O **Farmacia - Frontend** é uma aplicação web desenvolvida com **React** e **TypeScript**, com o objetivo de consumir e exibir dados de uma API REST construída com **Spring Boot**. A aplicação permite a visualização, criação, edição e exclusão de postagens de blog, categorizadas por temas e vinculadas a usuários autenticados.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Funcionalidades:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. home
+2. Listagem e gerenciamento de Categorias
+3. Criação, edição e exclusão de Categoria
+4. Associação entre Categoria e Produto
+5. Navegação entre páginas com React Router Dom
+6. Consumo de API com Axios
+7. Estilização com Tailwind CSS
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+<br />
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+
+## 3. Tecnologias Utilizadas
+
+| Tecnologia           | Finalidade                            |
+| -------------------- | ------------------------------------- |
+| **React**            | Biblioteca JavaScript para interfaces |
+| **TypeScript**       | Superset do JavaScript com tipagem    |
+| **Tailwind CSS**     | Estilização com classes utilitárias   |
+| **Axios**            | Consumo de APIs REST                  |
+| **React Router DOM** | Roteamento SPA                        |
+| **Vite**             | Build tool rápido para projetos React |
+
+<br />
+
+## 4. Pré-requisitos
+
+Antes de iniciar o projeto, certifique-se de ter instalado:
+
+- [Node.js](https://nodejs.org/) (versão 16 ou superior)
+- [Yarn](https://yarnpkg.com/)
+- [Git](https://git-scm.com/)
+- [Visual Studio Code](https://code.visualstudio.com/) ou outro editor
+- Backend - Spring ([Repositório da API](https://github.com/patriciaEliseu/blogpessoal-sts))
+
+<br />
+
+## 5. Como executar o projeto localmente
+
+1. **Clone o repositório:**
+
+```bash
+git clone git@github.com:patriciaEliseu/projeto_final_bloco_03.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. **Acesse a pasta do projeto:**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+cd projeto_final_bloco_03
 ```
+
+3. **Instale as dependências:**
+
+```bash
+yarn
+```
+
+4. **Execute o projeto em modo desenvolvimento:**
+
+```bash
+yarn dev
+```
+
+5. **Acesse a aplicação em:**
+
+```
+http://localhost:5173
+```
+
+<br />
+
+
+## 6. Integração com a API Backend
+
+A aplicação se comunica com a API do projeto:
+
+🔗 [farmacia - Backend Spring Boot](https://farmacia-ug0p.onrender.com/)
+
+> A URL base da API deve ser configurada (ex: `http://localhost:8080`) em um arquivo de configuração, como `.env`, ou diretamente nos serviços do Axios.
+
+<br />
+
+
+## 7. Estrutura de Diretórios
+
+```
+src/
+│
+├── assets/           → Imagens e ícones
+├── components/       → Componentes reutilizáveis
+├── models/           → Interfaces e tipos do projeto
+├── pages/            → Páginas da aplicação
+├── services/         → Configuração do Axios
+├── App.css           → Estilos do Componente raiz
+├── App.tsx           → Componente raiz
+├── main.tsx          → Entrada da aplicação
+└── index.css         → Estilos globais com Tailwind
+```
+
+<br />
+
+
+## 8. Implementações futuras
+
+- Criar CardProdutos , ListProdutos, DeleteProduto, FormProduto.
+- Responsividade aprimorada
+- Validações com React Hook Form
+- Testes com Jest + React Testing Library
+
+<br />
+
+
+## 9. Contribuição
+
+Contribuições são bem-vindas!
+
+Se você encontrou algum problema ou deseja propor melhorias:
+
+- Abra uma **issue**
+- Envie um **pull request**
+- Compartilhe com colegas aprendizes!
+
+<br />
+
+
+## 10. Contato
+
+Desenvolvido por [**PatríciaEliseu**](https://github.com/patriciaEliseu)
+Dúvidas ou sugestões? Entre em contato pelo GitHub ou abra uma issue no repositório.
