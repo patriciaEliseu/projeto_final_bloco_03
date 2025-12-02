@@ -29,7 +29,7 @@ function Navbar({menuState, onMenuToggle, onMenuClose}: Readonly<NavbarProps> ) 
         <div className='fixed top-0 left-0 z-50 flex justify-center w-full py-4 text-white bg-slate-800 md:py-2'>
                 <div className="container flex items-center justify-between mx-6 mt-2 text-lg">
                     {/* Logo da loja, sempre visível, redireciona para Home */}
-                    <Link to='/'>
+                    <Link to='/home'>
                         <img
                             src="https://ik.imagekit.io/0lohuh51eq/Imagem%20colada%20(2).png"
                             alt="Logo"

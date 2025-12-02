@@ -33,6 +33,7 @@ function App() {
       <div className='flex-1 w-full pt-16 bg-slate-100'>
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/home' element={<Home/>}/>
           
       </Routes>
       </div>
