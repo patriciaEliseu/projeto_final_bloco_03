@@ -5,6 +5,9 @@ import Footer from './components/footer/Footer'
 import Navbar from './components/navbar/Navbar'
 import Home from './pages/home/Home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import FormCategoria from './components/categorias/formcategoria/FormCategoria'
+import DeleteCategoria from './components/categorias/deletecategoria/DeleteCategoria'
+import ListaCategorias from './components/categorias/listacategorias/ListaCategorias'
 
 
 type MenuState = 'closed' | 'open';
@@ -34,6 +37,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/home' element={<Home/>}/>
+        <Route path="/categorias" element={<ListaCategorias />} /> 
+        <Route path="/cardcategoria" element={<FormCategoria />} />
+        <Route path="/editarcategoria/:id" element={<FormCategoria />} />
+        <Route path="/deletarcategoria/:id" element={<DeleteCategoria />} />  
           
       </Routes>
       </div>
