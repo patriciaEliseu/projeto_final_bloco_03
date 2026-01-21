@@ -90,7 +90,7 @@ yarn dev
 5. **Acesse a aplicação em:**
 
 ```
-http://localhost:5173
+https://projeto-final-bloco-03-weld.vercel.app/
 ```
 
 <br />
