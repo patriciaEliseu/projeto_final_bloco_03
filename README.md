@@ -90,7 +90,7 @@ yarn dev
 5. **Acesse a aplicação em:**
 
 ```
-https://projeto-final-bloco-03-weld.vercel.app/
+https://projeto-final-bloco-03-lovat.vercel.app/
 ```
 
 <br />
